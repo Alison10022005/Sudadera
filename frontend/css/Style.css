@@ -1,0 +1,439 @@
+body{
+
+    background-color: cornflowerblue;
+}
+
+
+
+
+/*----------------------------- dashboard ----------------------------------------------*/
+
+#TitleDashboard{
+
+    color: white;
+    margin: 30px 30%;
+    font-size: 35px;
+}
+
+#button_CerrarDashboard{
+
+    width: 110px;
+    height: 50px;
+    margin: 18px 0px 0px 1%;
+    border-radius: 1vh;
+    background-color: rgba(152, 210, 230, 0.921);
+    border: 2px solid white;
+
+}
+
+#formulario_bloque{
+
+    background-color: rgba(0, 0, 0, 0.433);
+    padding: 10px;
+
+}
+
+.inputDash{
+
+    width: 60%;
+    height: 25px;
+    margin: 8px 35px;
+}
+
+.label_formDash{
+
+    margin: 0px 35px;
+
+}
+
+.btn-DashIncrDecr{
+
+    width: 50px;
+    height: 30px;
+   margin:0px 0px 0px  8px;
+}
+
+#tituloDashboarh2{
+
+    margin: 50px 35px ;
+    color: white;
+
+}
+
+#btn-createProcuct{
+
+    width: 110px;
+    height: 50px;
+    margin: 18px 0px 0px 35px;
+    border-radius: 1vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.621);
+    border: 2px solid rgb(255, 255, 255);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#btn-createProcuct:hover{
+
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.621);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/*----------------------------- style login ---------------------------------------*/
+
+#body_login{
+
+    background-image: url("/javascript_navegador/proyecto_tienda_online/frontend/img/fondoLogin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    font-family: 'Roboto', sans-serif; /* Puedes cambiarla por otra fuente */
+    color: white;
+    
+}
+
+#Header_bloque{
+
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.598);
+    padding: 2px ;
+    border-radius: 1vh;
+
+}
+
+#Logo_img_header{
+    
+    width: 70px;
+    height: 70px;
+    border-radius: 2vh;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 6px 30px 20px 20px;
+}
+
+#button_Login{
+
+    width: 110px;
+    height: 50px;
+    margin: 18px 0px 0px 75%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    
+    
+}
+
+#button_Login:hover{
+
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    color: black;
+}
+
+#TitleLogin{
+
+    margin: 29px 2px;
+
+}
+
+#login_display{
+
+    display: flex;
+}
+
+#imgLogo_login{
+
+    width: 70px;
+    height: 70px;
+    border-radius: 2vh;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 6px 30px 20px 55px;
+
+}
+
+#fondo_login{
+
+    background-color: rgba(0, 0, 0, 0.469);
+    margin: 5% 30% 0% 35%;
+    padding: 20px;
+}
+
+#fondo_input{
+
+    margin: 40px 2px;
+}
+
+.inputLogin{
+
+    width: 70%;
+    height: 25px;
+    margin: 8px 35px;
+   
+}
+
+#checkInput{
+
+    margin: 35px 30px;
+}
+
+#btnDashboard{
+
+    width: 110px;
+    height: 50px;
+    margin: 18px 0px 0px 32%;
+    border-radius: 1vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.621);
+    border: 2px solid rgb(255, 255, 255);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#btnDashboard:hover{
+
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.621);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+
+/*---------------------------------Carrito de compras----------------------------------*/
+
+#fila-carrito{
+
+  
+    margin: 15px ;
+}
+
+#imgCarrito{
+
+    width: 50px;
+    height: 50px;
+    margin: 0px 20px 0px 5px;
+    border-radius: 2vh;
+}
+
+
+#table-car{
+
+    border-collapse: collapse;
+    width: 100%;
+}
+.th-car, .td-car {
+    border: 2px solid #ffffff;
+    padding: 8px;
+    text-align: center;
+  }
+ .th-car-colors{
+    background-color: #f2f2f2;
+  }
+
+#btn-carDelete{
+
+    width: 80px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 2px solid rgb(0, 0, 0);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#btn-carDelete:hover{
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.94);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+  /*------------------------Detalles del producto--------------------------------*/
+ 
+  #imgProductDetals{
+
+    width:450px;
+    height: 450px;
+    margin: 50px 60px;
+    border: 2px solid black;
+  }
+
+  #Container-detProdut{
+
+    display: flex;
+    background-color: white;
+  }
+
+  #section-detals{
+
+    margin: 70px 80px;
+  }
+
+  #name_productDetals{
+
+    font-size: 7vh;
+  }
+
+  .p_detals{
+
+    font-size: 16px;
+    margin: 15px 0px;
+  }
+
+#btn-detalsPoduct{
+
+    margin:35px 0px 0px 0px;
+    width: 210px;
+    height: 50px;
+    border-radius: 1vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.94);
+    border: 2px solid rgb(124, 200, 255);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#btn-detalsPoduct:hover{
+
+    color: rgb(0, 0, 0);
+    background-color: rgba(110, 159, 251, 0.621);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.btn-DetailsIncrDecr{
+
+    width: 50px;
+    height: 30px;
+   margin:0px 0px 0px  1px;
+   color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 2px solid rgb(0, 0, 0);
+    transition: background-color 0.1s ease-in-out;
+
+}
+
+.btn-DetailsIncrDecr:hover{
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.94);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.Container_DetalsIncDrec{
+
+    margin: 0px;
+
+}
+
+.Carruselimg{
+
+    width: 1190px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+
+
+}
+
+.Carruselimg.viible{
+
+    display: block;
+}
+
+.Carruselimg{
+
+    display: none;
+}
+
+#carrusel-nav{
+
+    background-color: #000000e2;
+    padding: 5px;
+}
+
+.nav_aHome{
+
+    color: #ffff;
+    text-decoration: none;
+    margin: 10px 20px;
+  
+}
+
+.sectnavHome{
+
+    margin: 20px;
+}
+
+#main-home{
+
+    background-color: #ffff;
+   padding: 10px;
+    
+}
+
+#img_productHome{
+
+    
+    width: 200px;
+    height: 200px;
+}
+
+#container_productHome{
+
+    margin: 40px 40px;
+    width: 250px;
+    height: 370px;
+    border: 1px solid black;
+}
+
+.DiseñoProductHome{
+
+    margin: 25px;
+}
+
+
+
+/*------------------------------------------------          foorter         -------------------------------------------------*/
+
+.footer {
+    background-color: #bcbcbc;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-brand {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .footer-links,
+  .footer-contact,
+  .footer-social,
+  .footer-legal {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-legal {
+    font-size: 0.8rem;
+    color: #616161;
+  }
+  
+  .footer-legal a {
+    color: #616161;
+  }
+
+  .h2_home{
+
+    
+    padding: 10px
+  }
+  

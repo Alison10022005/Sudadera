@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard sudaderas</title>
+    <link rel="stylesheet" href="/javascript_navegador/proyecto_tienda_online/frontend/css/Style.css">
+</head>
+<body>
+
+    <header>
+        <div id="Header_bloque">
+            <img id="imgLogo_login" src="/javascript_navegador/proyecto_tienda_online/frontend/img/logo.png" alt="">
+            <h3 id="TitleDashboard">Dashboard</h3>
+            <button id="button_CerrarDashboard">cerrar sesion</button>
+        </div>
+    </header>
+    
+    <main>
+
+        <div id="formulario_bloque">
+            <h2 id="tituloDashboarh2">Crear producto</h2>
+
+            <label class="label_formDash" for="imageUpload">Subir imagen:</label>
+            <br>
+            <input class="inputDash" type="file" id="imageUpload" accept="image/*">
+
+            <br>
+
+            <label class="label_formDash" for="">ingresa el nombre del producto:</label>
+            <br>
+            <input class="inputDash" type="text" >
+
+            <br>
+
+            <label class="label_formDash" for="">ingresa la descripcion: </label>
+            <br>
+            <textarea class="inputDash"   name="descripcion" rows="5" cols="50" placeholder="Escribe una descripción detallada..."></textarea>
+
+            <br>
+
+            <label class="label_formDash" for="">cantidad disponible:</label>
+            <br>
+            <div class="label_formDash" >
+            <button class="btn-DashIncrDecr " >-</button>
+            <input class="btn-DashIncrDecr" type="text" id="cantidad" class="cantidad" value="1" readonly>
+            <button class="btn-DashIncrDecr">+</button>
+
+        </div>
+
+            <br>
+
+            <label class="label_formDash" for="">precio:</label>
+            <br>
+            <input class="inputDash" type="text">
+
+            <br>
+
+            <button id="btn-createProcuct">Crear producto</button>
+        
+
+    </main>
+</body>
+</html>
