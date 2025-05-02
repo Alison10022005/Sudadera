@@ -3,9 +3,11 @@ let inputPassword = document.getElementById("inputPassword");
 let patronCorreo =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let VerPassword = document.getElementById("checkInput");
 
+inputPassword.type = "password";
+
 VerPassword.addEventListener("change", function(){
 
-     if(VerPassword .checked ){
+     if(VerPassword.checked ){
 
         inputPassword.type = "text";
      } else {
@@ -14,14 +16,14 @@ VerPassword.addEventListener("change", function(){
      }
 })
 
-let btnDashboard = document.getElementById("btnDashboard").addEventListener("click", function(){
+let btnDashboard = document.getElementById("btnDashboard").addEventListener("click", function(event){
 
     let EmailValido = inputEmail.value;
     let password = inputPassword.value;
 
     if(EmailValido == "" ||  password == ""){
 
-        event.preventDefault()
+        event.preventDefault();
         alert("ingrese todos los campos para poder continuar");
     }else if(!patronCorreo.test(EmailValido)){
 
@@ -29,7 +31,7 @@ let btnDashboard = document.getElementById("btnDashboard").addEventListener("cli
         alert("ingrese el email correcto, para poder continuar");
     }else if(password.length <= 6){
 
-        event.preventDefault()
+        event.preventDefault();
         alert("minimo 6 caracteres tiene la contraseña")
     }
 

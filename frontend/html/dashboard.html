@@ -21,44 +21,56 @@
         <div id="formulario_bloque">
             <h2 id="tituloDashboarh2">Crear producto</h2>
 
-            <label class="label_formDash" for="imageUpload">Subir imagen:</label>
+            <label   class="label_formDash" for="imageUpload">Subir imagen:</label>
             <br>
-            <input class="inputDash" type="file" id="imageUpload" accept="image/*">
+            
+            <input class="inputDash" type="file"  id="imagenProducto" accept="image/*">
+
+            <br>
+
+            <img id="previewImagen" src="" alt="Vista previa" style="width: 200px; display: none;">
+            <button id="btnQuitarImagen" type="button">Quitar imagen</button>
+
+
+
 
             <br>
 
             <label class="label_formDash" for="">ingresa el nombre del producto:</label>
             <br>
-            <input class="inputDash" type="text" >
+            <input id="nombreProducto" class="inputDash" type="text" >
 
             <br>
 
-            <label class="label_formDash" for="">ingresa la descripcion: </label>
+            <label class="descripcionProduct" class="label_formDash" for="">ingresa la descripcion: </label>
             <br>
-            <textarea class="inputDash"   name="descripcion" rows="5" cols="50" placeholder="Escribe una descripción detallada..."></textarea>
+            <textarea id="descripcionProducto" class="inputDash"   name="descripcion" rows="5" cols="50" placeholder="Escribe una descripción detallada..."></textarea>
 
             <br>
 
             <label class="label_formDash" for="">cantidad disponible:</label>
             <br>
             <div class="label_formDash" >
-            <button class="btn-DashIncrDecr " >-</button>
-            <input class="btn-DashIncrDecr" type="text" id="cantidad" class="cantidad" value="1" readonly>
-            <button class="btn-DashIncrDecr">+</button>
+            <button  id="btnDisminuirCantidad" class="btn-DashIncrDecr " >-</button>
+            <input id="cantidadProducto"  class="btn-DashIncrDecr" type="text" id="cantidad" class="cantidad" value="1" readonly>
+            <button id="btnAumentarCantidad"  class="btn-DashIncrDecr">+</button>
 
         </div>
 
             <br>
 
-            <label class="label_formDash" for="">precio:</label>
+            <label id="precioProducto"  class="label_formDash" for="">precio:</label>
             <br>
             <input class="inputDash" type="text">
 
             <br>
 
-            <button id="btn-createProcuct">Crear producto</button>
+            <button class="btn-createProcuct" id="btnCrearProducto">Crear producto</button>
         
 
+
     </main>
+
+    <script src="/javascript_navegador/proyecto_tienda_online/frontend/JSDom/Dashboard.js" ></script>
 </body>
 </html>
