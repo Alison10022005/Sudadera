@@ -7,10 +7,14 @@ let btnDisminuirCantidad = document.getElementById("btnDisminuirCantidad");
 let cantidadProducto = document.getElementById("cantidadProducto");
 let btnAumentarCantidad = document.getElementById("btnAumentarCantidad");
 let precioProducto = document.getElementById("precioProducto");
+let mensaje = document.getElementById("mensaje");
+
+
 
 //previsualizar la imagen
 const InputImagen = document.getElementById("imagenProducto");
 const PreviewImg = document.getElementById("previewImagen");
+
 
 InputImagen.addEventListener('change', function(){
     const archivoSelect = InputImagen.files[0];
@@ -59,8 +63,35 @@ btnAumentarCantidad.addEventListener("click", function(){
 
 })
 
+//el precio debe ser numerico
+//Evita que el usuario escriba letras (solo permite del 0 al 9)
+
+
+precioProducto.addEventListener("input", function(event) {
+    if (event.key < '0' || event.key > '9') {
+      event.preventDefault(); // Bloquea la tecla si no es un número
+    }
+
+      let valor = precioProducto.value.trim(); // Quitamos espacios
+      let precio = parseFloat(valor); // Convertimos a número
+
+      if (isNaN(precio)) {
+        mensaje.textContent = "Por favor ingresa un número válido.";
+        mensaje.style.color = "red";
+      } else {
+        mensaje.textContent = `Precio registrado: $${precio}`;
+        mensaje.style.color = "#00FF00";
+      }
+    
+  });
+
+  
+  
+
 //logica para crear el producto 
 let btnCrearProducto = document.getElementById("btnCrearProducto").addEventListener("click", function(event){
+
+   
 
     let NameProduct = nombreProducto.value;
     let ImgProduct = imagenProducto.value;
@@ -71,17 +102,18 @@ let btnCrearProducto = document.getElementById("btnCrearProducto").addEventListe
     
     if(NameProduct == "" || ImgProduct == ""  || DesProduct == "" || isNaN(priceProdut)  || priceProdut <= 0 || CantProduct <= 0 || isNaN(CantProduct)){
 
+      event.preventDefault();
+      alert("Todos los campos deben estar completos y válidos (precio y cantidad deben ser números positivos).");
 
-        
-        event.preventDefault();
-        alert("ingrese todos los campos para poder continuar");
+    
         
     }
 
-    console.log(NameProduct,ImgProduct, DesProduct, priceProdut  );
+    //shorthand: Cuando la propiedad del objeto y la variable se llaman igual, puedes escribirlo más corto, así, pero si no lo pones  normal como un objeto pero largo 
 
+    let ProductDate = { NameProduct,ImgProduct, DesProduct, priceProdut, CantProduct  };
 
-
+    console.log(ProductDate );
 
 });
 

@@ -42,7 +42,7 @@ body{
 
 .label_formDash{
 
-    margin: 0px 35px;
+    margin: 5px 35px;
 
 }
 
@@ -78,6 +78,19 @@ body{
     background-color: rgba(255, 255, 255, 0.621);
     border: 2px solid rgb(0, 0, 0);
 }
+
+#previewImagen{
+
+    width: 300px;
+    height: 300px;
+    margin: 3px 35px;
+}
+
+#btnQuitarImagen{
+
+    margin: 0px 35px;
+}
+
 
 
 /*----------------------------- style login ---------------------------------------*/
