@@ -87,10 +87,14 @@ precioProducto.addEventListener("input", function(event) {
 
   
   
+//array, dodne se van a guardar la lista de productos
+let ListaProductos = [];
+
 
 //logica para crear el producto 
 let btnCrearProducto = document.getElementById("btnCrearProducto").addEventListener("click", function(event){
 
+  event.preventDefault();
    
 
     let NameProduct = nombreProducto.value;
@@ -102,8 +106,9 @@ let btnCrearProducto = document.getElementById("btnCrearProducto").addEventListe
     
     if(NameProduct == "" || ImgProduct == ""  || DesProduct == "" || isNaN(priceProdut)  || priceProdut <= 0 || CantProduct <= 0 || isNaN(CantProduct)){
 
-      event.preventDefault();
+      
       alert("Todos los campos deben estar completos y válidos (precio y cantidad deben ser números positivos).");
+      return; // Evita que se cree el objeto si hay errores
 
     
         
@@ -113,7 +118,9 @@ let btnCrearProducto = document.getElementById("btnCrearProducto").addEventListe
 
     let ProductDate = { NameProduct,ImgProduct, DesProduct, priceProdut, CantProduct  };
 
-    console.log(ProductDate );
+    ListaProductos.push(ProductDate);
+
+    console.log("el producto creado: ", ListaProductos );
 
 });
 
