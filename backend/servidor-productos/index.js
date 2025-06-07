@@ -1,28 +1,44 @@
- //llamamos la libreria express,  para usarla
- const express = require('express');
- //permite mandar peticiones desde fronted
- const cors = require('cors');  
+document.getElementById("btnCrearProducto").addEventListener("click", function (event) {
+  event.preventDefault();
 
+  let NameProduct = nombreProducto.value.trim();
+  let ImgFile = imagenProducto.files[0];
+  let DesProduct = descripcionProducto.value.trim();
+  let CantProduct = parseInt(cantidadProducto.value);
+  let priceProdut = parseFloat(precioProducto.value);
 
- //creaos una instancia de express
- const app = express();
-// Permitir fetch() desde otro lugar
- app.use(cors()); 
+  if (
+    !NameProduct || !ImgFile || !DesProduct ||
+    isNaN(priceProdut) || priceProdut <= 0 ||
+    isNaN(CantProduct) || CantProduct <= 0
+  ) {
+    alert("Todos los campos deben estar completos y válidos.");
+    return;
+  }
 
- //ayuda a entender y leer el formato JSON
- app.use(express.json());
+  // Crea el FormData
+  let formData = new FormData();
+  formData.append("nombre", NameProduct);
+  formData.append("descripcion", DesProduct);
+  formData.append("precio", priceProdut);
+  formData.append("cantidad", CantProduct);
+  formData.append("imagen", ImgFile); // archivo real
 
- //creamos una ruta para el servidor
- app.get('/productos', (req, res)=>{
-   // Recibe el producto del fetch
-   const nuevoProducto = req.body; 
-   console.log("Producto recibido:", nuevoProducto);
-    res.send('producto guardado');
- });
+  // Enviar al servidor
+  fetch("http://localhost:3000/api/productos", {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Respuesta del servidor:", data);
+      alert("Producto creado exitosamente en el servidor.");
+    })
+    .catch((err) => {
+      console.error("Error al enviar producto:", err);
+      alert("Hubo un error al crear el producto.");
+    });
+});
 
- //activamos el servidor para probar si est funcionando 
- app.listen(3000,()=>{
-    console.log('sevidor escuchando en http://localhost:3000');
- });
 
  
